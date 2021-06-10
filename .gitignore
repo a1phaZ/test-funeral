@@ -1,0 +1,8 @@
+node_modules
+test_task_api.log
+public/images
+uploads
+package-lock.json
+yarn.lock
+.env
+/.idea/
