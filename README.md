@@ -58,11 +58,11 @@
 ## Запуск проекта
 - Клонировать репозиторий 
 ```
-git clone https://gitlab.com/devopsafs/test-tasks/test-api-js-backend.git
+git clone https://github.com/a1phaZ/test-funeral.git
 ```
 - Зайти в папку проекта
 ```
-cd test-api-js-backend
+cd test-funeral
 ```
 - Установить зависимости
 ```
