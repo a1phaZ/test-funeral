@@ -64,10 +64,6 @@ git clone https://gitlab.com/devopsafs/test-tasks/test-api-js-backend.git
 ```
 cd test-api-js-backend
 ```
-- Перейти в ветку
-```
-git checkout zebzeev_an
-```
 - Установить зависимости
 ```
 yarn || npm i
