@@ -8,7 +8,9 @@ const {
 require('dotenv')
   .config();
 
-const pool = new Pool({
+const connectionString = process.env.DATABASE_URL;
+
+const pool = new Pool(process.env.DATABASE_URL ? {connectionString} : {
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
   database: process.env.NODE_ENV === 'test' ? process.env.DATABASE_TEST : process.env.DATABASE,
