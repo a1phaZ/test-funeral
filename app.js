@@ -11,6 +11,7 @@ const logger = require('./services/logger')(module);
 const authRouter = require('./routes/auth.routes');
 const companiesRouter = require('./routes/companies.routes');
 const contactsRouter = require('./routes/contacts.routes');
+const messageRouter = require('./routes/message.routes');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use(express.static(`${__dirname}/public`));
 app.use('/auth', authRouter);
 app.use('/companies', companiesRouter);
 app.use('/contacts', contactsRouter);
+app.use('/messages', messageRouter);
 
 app.get('/', (req, res) => {
   const path = `${__dirname}/README.md`;

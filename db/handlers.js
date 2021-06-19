@@ -6,6 +6,7 @@ module.exports = {
   getTableNameByReq,
   serializeCompanyData,
   serializeArray,
+  serializeMessages,
   postApi: testPostApi,
   getApi: testGetApi,
   patchApi: testPatchApi,
@@ -136,6 +137,16 @@ function serializeCompanyData(data) {
 
 function serializeArray(array, func) {
   return array.map((row) => func(row));
+}
+
+function serializeMessages(array) {
+  const commentList = array.filter((message) => !!message.comment_by);
+  const messageList = array.filter((message) => !message.comment_by);
+  
+  return messageList.reduce((acc, curr) => {
+    acc = [...acc, {...curr, comments: commentList.filter((comment) => comment.comment_by === curr.id)}];
+    return acc
+  }, []);
 }
 
 function testPostApi(request, app, url, data, token) {

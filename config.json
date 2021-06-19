@@ -12,7 +12,7 @@
   "uploads_dir": "./uploads",
   "images_dir": "public/images/",
   "thumb_size": 160,
-  "rows_per_page": 5,
+  "rows_per_page": 100000000000,
   "bcrypt": {
     "salt": {
       "round": 10

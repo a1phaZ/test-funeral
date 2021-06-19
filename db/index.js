@@ -37,6 +37,14 @@ function dbGetAll(req) {
   });
 }
 
+function dbGetAllMessages() {
+  return new Promise((resolve, reject) => {
+    pool.query(`SELECT * FROM messages AS m LEFT JOIN comments AS c ON m.id = c.comment_by`)
+      .then((results) => resolve(results))
+      .catch((err) => reject(err));
+  })
+}
+
 /**
  * Функция получения записи из БД по id
  * @param req
@@ -171,5 +179,6 @@ module.exports = {
   dbDeleteOne,
   dbGetOneByParam,
   dbDeleteAll,
+  dbGetAllMessages,
   pool,
 };
