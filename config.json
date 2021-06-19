@@ -1,6 +1,6 @@
 {
   "app": "Blank API for backend developer",
-  "port": 2114,
+  "port": 80,
   "jwt_ttl": 604800,
   "log": {
     "path": "test_task_api.log",
