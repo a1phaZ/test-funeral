@@ -75,7 +75,7 @@ cron.schedule('0 * * * *', () => {
 async function start() {
   try {
     app.listen(5000, () => {
-      logger.info(`App has been started on port ${process.env.PORT || 5000}...`);
+      logger.info(`App has been started on port 5000...`);
     });
   } catch (error) {
     logger.error(error.message);
